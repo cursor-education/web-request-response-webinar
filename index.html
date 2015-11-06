@@ -5,7 +5,7 @@
 
     <title>web-request-response</title>
 
-    <meta name="author" content="cursor.education school">
+    <meta name="author" content="itspoma, cursor.education school">
     <meta name="keywords" content="how internet works, http protocol, http request, http response, http packet, headers, dns, model OSI">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,31 +13,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/reveal.css">
-    <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="../style/reveal/css/theme/cursor-education.css" id="theme">
+    <link rel="stylesheet" href="../style/reveal/css/theme/cursor-education-more.css" id="theme">
 
     <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/lib/css/zenburn.css">
 
     <!--[if lt IE 9]>
       <script src="http://cursor-education.github.io/style/reveal/lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <style>
+      .reveal h2.white-bg {
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 20px 30px;
+      }
+    </style>
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>
-          <h2>Web Request & Response</h2>
+
+        <section
+          data-background="http://2.bp.blogspot.com/-8y7ZDoaoqkA/TrwDQ_Eq6cI/AAAAAAAANSo/UM9rAdd7wCI/s1600/global_en_points.png"
+          data-background-repeat="repeat"
+          data-background-size="120%"
+          data-background-position="0px -100px"
+        >
+          <h2 class="white-bg">Web Request & Response</h2>
+          <!-- <img src="http://cursor.education/img/logo-big.png" class="no-border" /> -->
           <p>
             <small>
-              <a href="http://cursor.education/" target="_blank">CURSOR Education School</a> / <a href="http://github.com/itspoma" target="_blank">@itspoma</a>
+              <a href="http://github.com/itspoma" target="_blank">@itspoma</a>
+              <br/>
+              &copy; <a href="http://cursor.education/" target="_blank">CURSOR Education School</a>
             </small>
+          </p>
+
+          <aside class="notes">
+            test
+          </aside>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            люди навчилися між собою спілкуватися
+            привіт-привіт
           </p>
         </section>
 
         <section>
-          <h2>Hello There</h2>
+          <h2>...</h2>
           <p>
-            Here will be a first slide!
+            29 октября 1969 року перша комунікація між компютерами
+            ARPanet
+            "LOG"
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            общение компютеров и общение людей между собой
+             установка соидинения
+             обмен
+             конец сессии
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            інтернет працює на різних рівнях
+             фізичний (кабелі, роутери, маршрутизатори, )
+             поверх - є стек мережевих протоколів (tcp/ip)
+             перетворення інформації при її руху по рівнях
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            протокол - правила общения между двума
+            tcp/ip набір мережевих протоколів передачі даних
+            уровни стека (вики)
+             - канальный (езернет, ..)
+             - сетевой (IP)
+             - транспортный (tcp, udp, ..)
+             - прикладной
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            канальный
+             обмен сигналами
+             закодироваными
+             между 2ма устройствами
+             как передать? как прочитать?
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            сетевой
+             айпи
+             ? структура пакетов (мало смысла, лучше общий принцип)
+             уникальный идентификатор устройства
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            IPv4
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            IPv6
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>...</h2>
+            <p>
+              DNS
+                A A6 AAAA CNAME
+            </p>
+          </section>
+
+          <section>
+            <h2>...</h2>
+            <p>
+              local dns? hosts
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            NAT
+            MAC Address
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            ports
+            штекер/розетка
+            ухо
+            пара: ip+port = socket -- возможность проложить трубку
+            localhost
+          </p>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            model OSI
           </p>
         </section>
 
@@ -49,12 +192,18 @@
           </p>
         </section>
 
-      </div>
+        <section>
+          <h2>...</h2>
+          <p>
+            эндрю таненбаум - компютерные сети
+          </p>
+        </section>
 
+      </div>
     </div>
 
     <script src="http://cursor-education.github.io/style/reveal/lib/js/head.min.js"></script>
     <script src="http://cursor-education.github.io/style/reveal/js/reveal.js"></script>
-    <script src="http://cursor-education.github.io/style/reveal/main.js"></script>
+    <script src="../style/reveal/main.js"></script>
   </body>
 </html>
