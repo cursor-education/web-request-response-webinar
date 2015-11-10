@@ -21,6 +21,22 @@
     <!--[if lt IE 9]>
       <script src="http://cursor-education.github.io/style/reveal/lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+    .reveal.overview {
+      background: #eee;
+    }
+    .reveal.overview .slides section:hover,
+    .reveal.overview .slides section.present {
+      outline-color: rgba(255, 121, 0, 0.5);
+    }
+    .reveal.overview section {
+      background: #fff;
+    }
+    .reveal.overview .backgrounds .slide-background {
+      /*background-image: none !important;*/
+    }
+    </style>
   </head>
 
   <body>
@@ -34,7 +50,7 @@
           style="background: rgba(255,255,255,0.7)"
         >
           <h2>Web Request & Response</h2>
-          
+
           <small>
             <a href="http://github.com/itspoma" target="_blank">@itspoma</a>
             /
@@ -44,6 +60,19 @@
           <aside class="notes">
             test
           </aside>
+        </section>
+
+        <section>
+          <h2>...</h2>
+          <p>
+            http protocol basics
+            tcp/ip model
+            model OSI
+            dns
+            cookies / session
+            https
+            packet analyzers / sniffers
+          </p>
         </section>
 
         <section>
@@ -60,17 +89,35 @@
             29 октября 1969 року перша комунікація між компютерами
             ARPanet
             "LOG"
+
+            Tim Berners-Lee, the father of WWW (HTML, URL, HTTP)
           </p>
         </section>
 
         <section>
-          <h2>...</h2>
-          <p>
-            общение компютеров и общение людей между собой
-             установка соидинения
-             обмен
-             конец сессии
-          </p>
+          <section>
+            <h2>...</h2>
+            <p>
+              общение компютеров и общение людей между собой
+               установка соидинения
+               обмен
+               конец сессии
+            </p>
+          </section>
+
+          <section>
+            <h2>web browser</h2>
+            <p>
+              ...
+            </p>
+          </section>
+
+          <section>
+            <h2>web server</h2>
+            <p>
+              ...
+            </p>
+          </section>
         </section>
 
         <section>
@@ -84,54 +131,79 @@
         </section>
 
         <section>
-          <h2>...</h2>
-          <p>
-            протокол - правила общения между двума
-            tcp/ip набір мережевих протоколів передачі даних
-            уровни стека (вики)
-             - канальный (езернет, ..)
-             - сетевой (IP)
-             - транспортный (tcp, udp, ..)
-             - прикладной
-          </p>
+          <section>
+            <h2>...</h2>
+            <p>
+              протокол - правила общения между двума
+              tcp/ip набір мережевих протоколів передачі даних
+              уровни стека (вики)
+               - канальный (езернет, ..)
+               - сетевой (IP)
+               - транспортный (tcp, udp, ..)
+               - прикладной
+            </p>
+          </section>
+
+          <section>
+            <h2>TCP/IP Model</h2>
+            <p>
+              tcp/ip 4 layers
+            </p>
+          </section>
+
+          <section>
+            <h2>...</h2>
+            <p>
+              канальный
+               обмен сигналами
+               закодироваными
+               между 2ма устройствами
+               как передать? как прочитать?
+            </p>
+          </section>
+
+          <section>
+            <h2>...</h2>
+            <p>
+              сетевой
+               айпи
+               ? структура пакетов (мало смысла, лучше общий принцип)
+               уникальный идентификатор устройства
+            </p>
+          </section>
         </section>
 
         <section>
-          <h2>...</h2>
-          <p>
-            канальный
-             обмен сигналами
-             закодироваными
-             между 2ма устройствами
-             как передать? как прочитать?
-          </p>
+          <section>
+            <h2>IP Address</h2>
+            <p>
+              an internet protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uess the Internet Protocol for communication
+            </p>
+          </section>
+
+          <section>
+            <h2>...</h2>
+            <p>
+              IPv4
+            </p>
+          </section>
+
+          <section>
+            <h2>...</h2>
+            <p>
+              IPv6
+            </p>
+          </section>
         </section>
 
         <section>
-          <h2>...</h2>
-          <p>
-            сетевой
-             айпи
-             ? структура пакетов (мало смысла, лучше общий принцип)
-             уникальный идентификатор устройства
-          </p>
-        </section>
+          <section>
+            <h2>DNS</h2>
+            <p>
+              DNS
+            </p>
+          </section>
 
-        <section>
-          <h2>...</h2>
-          <p>
-            IPv4
-          </p>
-        </section>
-
-        <section>
-          <h2>...</h2>
-          <p>
-            IPv6
-          </p>
-        </section>
-
-        <section>
           <section>
             <h2>...</h2>
             <p>
@@ -168,9 +240,309 @@
         </section>
 
         <section>
+          <section>
+            <h2>OSI Model</h2>
+            <p>
+              the need for layered architecture
+              data communication among heterogeneous systems - difficulties and solutions
+            </p>
+          </section>
+
+          <section>
+            <h2>OSI Model: layers</h2>
+            <p>
+              layers (transmit <--> receive) + functions
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>...</h2>
+            <p>
+              URL
+              are location dependent
+              it contains four distinct parts
+                the protocol type
+                the machine name
+                the directory path
+                the file name
+              file URLs, FTP URLs, http URLs
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>...</h2>
+            <p>
+              http protocol
+              hyper text transfer protocol
+              client-server network protocol
+              in use by the World-Wide Web since 1990
+              based on Request-Response Paradigm
+            </p>
+          </section>
+
+          <section>
+            <h2>http: accessing resources over the web</h2>
+            <p>
+              <pre><code data-trim contenteditable>
+                &lt;protocol&gt;://&lt;server&gt;/&lt;path&gt;
+
+                communication protocol between the client and the server
+                defines the address (uniform resource locator)
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>http: characteristics</h2>
+            <p>
+              request-response mechanism
+                client sending a <i>request</i> to server
+                server generates a <i>response</i>
+
+              resource identification
+                each http request includes a URI (uniform resource identifier)
+
+              statelessness
+                the server does not maintail any information about the transaction
+
+              meta data support
+                metadata about information can be exchanged in the message
+            </p>
+          </section>
+
+          <section>
+            <h2>http: request message/format</h2>
+            <p>
+              request line - GET /index.html(relative url of the resource) HTTP/1.0
+              header lines - Host: www.site.com
+                              Date: 123
+                              User-Agent: ...
+                              Accept-Language: ..
+              carriage return/line feed
+              message body (Content-Length: message-payload)
+            </p>
+          </section>
+
+          <section>
+            <h2>http: request methods</h2>
+            <p>
+              GET
+                method means retreive whatever information
+                whatever information is identified by the request-uri
+                can Get static content and data produced by a program
+
+              POST
+                used to send data to the server for updates
+                submit information to web server
+                (posting to blog, submission of user form)
+                information is included in message body
+                the actual function depends on request uri
+            </p>
+          </section>
+
+          <section>
+            <h2>http: request method example</h2>
+            <p>
+              ...
+            </p>
+          </section>
+
+          <section>
+            <h2>http: request methods</h2>
+            <p>
+              HEAD
+                response does not include message body
+                useful for getting metadata without transfering the resource
+                also useful for debugging, checking for validity, accessability and modification
+
+              PUT
+                requests a server store the enclosed data under the supplied request url
+                creates the resource if it does not create
+                not useful for web publishing
+
+              DELETE
+                removes the web object
+
+              TRACE
+                invokes a remove application layer feedback of the request message
+                useful for testing what is being received at the server
+                also possible to forward to intermediaries for debugging purposes
+
+              OPTIONS
+                requests information about communication options available to server
+            </p>
+          </section>
+
+          <section>
+            <h2>safe methods</h2>
+            <p>
+              q?
+            </p>
+          </section>
+
+          <section>
+            <h2>http idempotent</h2>
+            <p>
+              q?
+            </p>
+          </section>
+
+          <section>
+            <h2>http: response format</h2>
+            <p>
+              status line - HTTP/1.0 200 OK
+              header lines (server & resource meta data) - Data: 123
+                              Server: Apache/1.3.12 (Unix)
+                              Last-Modified: (data)
+                              Content-Type: text/html
+              carriage return/line feed
+              message body (Content-Length: message-payload)
+            </p>
+          </section>
+
+          <section>
+            <h2>result code and phrase</h2>
+            <p>
+              1xx: Informational - not done yet
+              2xx: Success - you win
+              3xx: Redirection - you lose but try again
+              4xx: Client Error - you lose, your fault
+              5xx: Server Error - you lose, my bad
+
+              ..examples here, like "200 OK"..
+            </p>
+          </section>
+
+          <section>
+            <h2>redirection</h2>
+            <p>
+              http allows servers to redirect a client request to a different location
+
+              HTTP/1.1 302 Found
+              Location: ...
+            </p>
+          </section>
+
+          <section>
+            <h2>improvements in http/1.1</h2>
+            <p>
+              persistent connections
+                keeps the connection open after the server response
+                connection can be closed by either client or server
+
+              request pipelining
+                allow a client to send several requests without waiting for a response
+                server responds in the same order
+
+              chunked encoding
+                allows sender to break a message into arbitrary sized chunks
+                useful for dynamically created response messages
+            </p>
+          </section>
+
+          <section>
+            <h2>cookies</h2>
+            <p>
+              http is stateless protocol
+              cookies manage state maintenance by shifting the burden to client
+              cookies are transmitter in clear text (security issue)
+
+              ..image here..
+
+              session cookie
+              persistent cookie
+              secure cookie
+              httpOnly cookie
+              third-party cookie
+              supercookie
+
+              setting a cookie
+              expiration
+            </p>
+          </section>
+
+          <section>
+            <h2>session</h2>
+            <p>
+              session cookies
+              web-browsers normally delete session cookies when the user closes the browser
+            </p>
+          </section>
+
+          <section>
+            <h2>user authentication</h2>
+            <p>
+              users browser information remembers credentials and includes them in headers for subsequent requests
+              browser typically deletes stored authentication credentials once browser is closed
+              http allos various authentication mechanisms
+              
+              ..code 401..
+              ..image here..
+            </p>
+          </section>
+
+          <section>
+            <h2>ssl (secure socket layer): secure web commucations</h2>
+            <p>
+              was designed to encrypt any tcp/ip based network traffic and provide the following capabilities
+              ssl protocol is application independent
+              operates between application layer and transport layer
+              application protocol such as http sit on top of it and tcp/ip beneath it
+              ssl provides
+
+              ..how ssl works..
+
+              need ssl when:
+              - you have an online store or accept online order and credit cards
+              - you offer a login / sign-in on your site
+              - you process sensitive data such as address, bidth date, ID numbers
+              - you need to comply with privacy and security requirements
+            </p>
+          </section>
+
+          <section>
+            <h2>AJAX - asynchronous javascript and xml</h2>
+            <p>
+              is a technology used by interactive web applications to make http requests to a server without causing page transitions
+              requests have to go to the same domain as the page
+
+              ..image..
+            </p>
+          </section>
+
+          <section>
+            <h2>CORS - cross-origin resource sharing</h2>
+            <p>
+              allows js on a web page to make a XMLHttpRequests to another domain
+              "prefighted" requests first send an http options method
+
+              ..image with access-control..
+            </p>
+          </section>
+
+          <section>
+            <h2>JSON - json with padding</h2>
+            <p>
+              provides a method to rqeuest data from a server in a different domain
+            </p>
+          </section>
+
+          <section>
+            <h2>http advantages</h2>
+            <p>
+              
+            </p>
+          </section>
+        </section>
+
+        <section>
           <h2>...</h2>
           <p>
-            model OSI
+            sniffers / analyzers
           </p>
         </section>
 
@@ -186,6 +558,8 @@
           <h2>...</h2>
           <p>
             эндрю таненбаум - компютерные сети
+            http caching (cache-control, last-modified)
+            http://habrahabr.ru/company/htmlacademy/blog/254825/
           </p>
         </section>
 
