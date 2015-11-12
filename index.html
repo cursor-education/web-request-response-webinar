@@ -23,6 +23,9 @@
     <![endif]-->
 
     <style type="text/css">
+    img.no-border {
+      border: none;
+    }
     .reveal.overview {
       background: #eee;
     }
@@ -33,8 +36,16 @@
     .reveal.overview section {
       background: #fff;
     }
-    .reveal.overview .backgrounds .slide-background {
-      /*background-image: none !important;*/
+
+    #slide0 small {
+      color: #aaa;
+    }
+    #slide0 small a {
+      color: #aaa;
+      border-bottom: 1px #888 solid;
+    }
+    #slide0 small a:hover {
+      color: white;
     }
     </style>
   </head>
@@ -47,9 +58,10 @@
           data-background="assets/global-points.png"
           data-background-repeat="repeat"
           data-opacity="0.3"
-          style="background: rgba(255,255,255,0.7)"
+          style="background: rgba(0,0,0,0.6)"
+          id="slide0"
         >
-          <h2>Web Request & Response</h2>
+          <h2 style="color:white">Web Request & Response</h2>
 
           <small>
             <a href="http://github.com/itspoma" target="_blank">@itspoma</a>
@@ -63,29 +75,48 @@
         </section>
 
         <section>
-          <h2>...</h2>
+          <h2>Agenda</h2>
           <p>
-            http protocol basics
-            tcp/ip model
-            model OSI
-            dns
-            cookies / session
-            https
-            packet analyzers / sniffers
+            <ul>
+              <li>Internet evolution
+              <li>HTTP protocol
+              <li>Model TCP/IP & OSI
+              <li>DNS Service
+              <li>Cookies & Sessions
+              <li>HTTPs
+              <li>Packet analyzers & sniffers
+            </ul>
           </p>
+        </section>
+
+        <section>
+          <p>
+            Люди навчилися між собою спілкуватися.
+            <br/>
+
+            <ul>
+              <li>"Привіт"
+              <li>"Привіт"
+            </ul>
+
+            <br/>
+
+            <img class="no-border" src="http://206hwf3fj4w52u3br03fi242.wpengine.netdna-cdn.com/wp-content/uploads/2008/02/evol.jpg" />
+            <img class="no-border" src="http://humans-ethology.com/images/slider/img-s1.png" />
+          </p>
+
+          <aside class="notes">
+            in the classical domain of evolution
+            Sequential Fallacy
+
+          </aside>
         </section>
 
         <section>
           <h2>...</h2>
           <p>
-            люди навчилися між собою спілкуватися
-            привіт-привіт
-          </p>
-        </section>
+            ARPANET…Web 1.0…Web 2.0…Web 3.0/SemWeb
 
-        <section>
-          <h2>...</h2>
-          <p>
             29 октября 1969 року перша комунікація між компютерами
             ARPanet
             "LOG"
@@ -98,6 +129,7 @@
           <section>
             <h2>...</h2>
             <p>
+              <img class="no-border" src="https://s3.amazonaws.com/one-month-rails-production/assets/images/000/000/075/original/image01.png?1412885329" />
               общение компютеров и общение людей между собой
                установка соидинения
                обмен
@@ -132,9 +164,19 @@
 
         <section>
           <section>
-            <h2>...</h2>
+            <h2>Protocol definition</h2>
             <p>
               протокол - правила общения между двума
+            </p>
+
+            <aside class="notes">
+              ..
+            </aside>
+          </section>
+
+          <section>
+            <h2>...</h2>
+            <p>
               tcp/ip набір мережевих протоколів передачі даних
               уровни стека (вики)
                - канальный (езернет, ..)
@@ -245,6 +287,13 @@
             <p>
               the need for layered architecture
               data communication among heterogeneous systems - difficulties and solutions
+              network complexities
+                different types of hardware & software
+                different operation systems
+                different types of data to be transfered (text, images, music, video, ..)
+                data must be transfered without errors
+                many different paths may have to be taken
+                yet 
             </p>
           </section>
 
@@ -260,6 +309,7 @@
           <section>
             <h2>...</h2>
             <p>
+              <img class="no-border" src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http1-url-structure.png" />
               URL
               are location dependent
               it contains four distinct parts
@@ -540,10 +590,19 @@
         </section>
 
         <section>
-          <h2>...</h2>
-          <p>
-            sniffers / analyzers
-          </p>
+          <section>
+            <h2>...</h2>
+            <p>
+              sniffers / analyzers
+            </p>
+          </section>
+
+          <section>
+            <h2>Chrome/Webkit inspector</h2>
+            <p>
+              <img class="no-border" src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http1-chrome-inspector.png" />
+            </p>
+          </section>
         </section>
 
         <section style="text-align: left;">
