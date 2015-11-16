@@ -717,7 +717,6 @@
                 <tr>
               </tbody>
               </table>
-
             </p>
             <aside class="notes">
               <pre>
@@ -1184,177 +1183,372 @@
               <pre>
             </aside>
           </section>
+
+          <section>
+            <h2>Relative vs Absolute URLs</h2>
+            <p>
+              http<u>s</u>://<u>www.</u>example.com
+              <br/>
+              <br/>
+
+              <b>Absolute URLs:</b><br/>
+              <ul>
+                <li>http://yourdomain.com/images/example.png
+                <li>//yourdomain.com/images/example.png
+              </ul>
+
+              <br/>
+              <br/>
+
+              <b>Relative URLs:</b><br/>
+              <ul>
+                <li>/images/example.png
+                <li>images/example.png
+                <li>file.php
+                <li>../.././../css/default.css
+              </ul>
+            </p>
+            <aside class="notes">
+              <pre>
+                http://example.com
+                http://www.example.com
+
+                absolute includes protocol and domain
+              <pre>
+            </aside>
+          </section>
         </section>
 
         <section>
           <section>
-            <h2>...</h2>
+            <h2>HTTP Protocol</h2>
             <p>
-              http protocol
-              hyper text transfer protocol
-              client-server network protocol
-              in use by the World-Wide Web since 1990
-              based on Request-Response Paradigm
+              HyperText Transfer Protocol
+              <br/>
+
+              <img class="no-border" src="http://etutorials.org/shared/images/tutorials/tutorial_37/02fig03.gif" />
             </p>
+            <aside class="notes">
+              <pre>
+                протокол передачи гипертекста
+                
+                гіпертекст - словник, енциклопедія
+                текст шо містить ссилки на інші частини цього тексту, яке має до нього відношення
+
+                сьогодні - використовується для передачі різних данних
+
+                client-server network protocol
+                запрос-ответ
+
+                in use by the World-Wide Web since 1990
+              <pre>
+            </aside>
           </section>
 
           <section>
-            <h2>http: accessing resources over the web</h2>
+            <h2>http: accessing resources</h2>
             <p>
-              <pre><code data-trim contenteditable>
-                &lt;protocol&gt;://&lt;server&gt;/&lt;path&gt;
-
-                communication protocol between the client and the server
-                defines the address (uniform resource locator)
+              <pre><code data-trim contenteditable style="padding:20px">
+                &nbsp;&lt;protocol&gt;://&lt;server&gt;/&lt;path&gt;
               </code></pre>
             </p>
+            <aside class="notes">
+              <pre>
+                communication між client and the server
+                всі операції/маніпуляції над конкретним URI-ресурсом
+
+                фішкою протоколу - можливість клієнту задати в якому вигляді він хоче отримати відповідь
+                формат, кодування, мова, тд
+              <pre>
+            </aside>
           </section>
 
           <section>
             <h2>http: characteristics</h2>
             <p>
-              request-response mechanism
-                client sending a <i>request</i> to server
-                server generates a <i>response</i>
-
-              resource identification
-                each http request includes a URI (uniform resource identifier)
-
-              statelessness
-                the server does not maintail any information about the transaction
-
-              meta data support
-                metadata about information can be exchanged in the message
+              <ul>
+                <li>request-response mechanism
+                  <br/>
+                  <small>client sending a <i>request</i> to server,<br/>
+                  server generates a <i>response</i></small>
+                <li>resource identification
+                  <br/>
+                  <small>each http request includes a URI</small>
+                <li>statelessness
+                  <br/>
+                  <small>the server does not maintail any information about the transaction</small>
+                <li>meta data support<br/>
+                  <small>metadata about information can be exchanged in the message</small>
+              </ul>
             </p>
+            <aside class="notes">
+              <pre>
+                request-response mechanism
+                  client sending a <i>request</i> to server
+                  server generates a <i>response</i>
+
+                resource identification
+                  each http request includes a URI (uniform resource identifier)
+
+                statelessness
+                  the server does not maintail any information about the transaction
+
+                meta data support
+                  metadata about information can be exchanged in the message
+              <pre>
+            </aside>
           </section>
 
           <section>
             <h2>http: request message/format</h2>
             <p>
-              request line - GET /index.html(relative url of the resource) HTTP/1.0
-              header lines - Host: www.site.com
-                              Date: 123
-                              User-Agent: ...
-                              Accept-Language: ..
-              carriage return/line feed
-              message body (Content-Length: message-payload)
+              <pre><code data-trim contenteditable style="padding:20px">
+(request line)  GET /index.html HTTP/1.0
+(headers lines) Host: www.site.com
+                Date: 123
+                User-Agent: Mozilla/1.0 (Chrome v0.5)
+                Accept-Language: ru, en
+                *Content-Length: message-payload
+(carriage line feed)
+                (message body)
+              </code></pre>
             </p>
+            <aside class="notes">
+              <pre>
+                request-line = тип повідомлення
+                хедерс - заголовки, характеризують тіло повідомлення
+                Message-Body - тіло повідомлення, дані
+
+                HTTP/1.0 - 1996
+                HTTP/1.1 - 1999 - keep-connection
+                HTTP/2 - 2015 - binary, priorities
+              <pre>
+            </aside>
           </section>
 
           <section>
             <h2>http: request methods</h2>
             <p>
-              GET
-                method means retreive whatever information
-                whatever information is identified by the request-uri
-                can Get static content and data produced by a program
+              <ul>
+                <li>GET
+                  <br/>
+                  <small>
+                  to retreive whatever information
+                  </small>
 
-              POST
-                used to send data to the server for updates
-                submit information to web server
-                (posting to blog, submission of user form)
-                information is included in message body
-                the actual function depends on request uri
+                <li>POST
+                  <br/>
+                  <small>
+                  used to send data to the server for updates<br/>
+                  submit information to web server
+                  </small>
+              </ul>
             </p>
+            <aside class="notes">
+              <pre>
+                GET
+                  information is identified by the request-uri
+                  can Get static content
+
+                POST
+                  (posting to blog, submission of user form)
+                  information is included in message body
+                  the actual function depends on request uri
+              <pre>
+            </aside>
           </section>
 
           <section>
             <h2>http: request method example</h2>
             <p>
-              ...
+              <pre><code data-trim contenteditable style="padding:20px">
+GET /wiki/HTTP HTTP/1.0
+Host: ru.wikipedia.org
+User-Agent: HTTPTool/1.0
+              </code></pre>
             </p>
           </section>
 
           <section>
-            <h2>http: request methods</h2>
+            <h2>http: other request methods</h2>
             <p>
-              HEAD
-                response does not include message body
-                useful for getting metadata without transfering the resource
-                also useful for debugging, checking for validity, accessability and modification
+              <ul>
+                <li>HEAD
+                  <br/>
+                  <small>
+                    response does not include message body<br/>
+                    useful for getting metadata without transfering the resource
+                  </small>
 
-              PUT
-                requests a server store the enclosed data under the supplied request url
-                creates the resource if it does not create
-                not useful for web publishing
+                <li>PUT
+                  <br/>
+                  <small>
+                    creates the resource if it does not create
+                  </small>
 
-              DELETE
-                removes the web object
+                <li>DELETE
+                  <br/>
+                  <small>
+                    removes the web object
+                  </small>
 
-              TRACE
-                invokes a remove application layer feedback of the request message
-                useful for testing what is being received at the server
-                also possible to forward to intermediaries for debugging purposes
+                <li>TRACE
+                  <br/>
+                  <small>
+                    invokes a remove application layer feedback of the request message
+                    <br/>
+                    useful for testing what is being received at the server
+                  </small>
 
-              OPTIONS
-                requests information about communication options available to server
+                <li>OPTIONS
+                  <br/>
+                  <small>
+                    requests information about communication options available to server
+                  </small>
+              </ul>
             </p>
           </section>
 
           <section>
-            <h2>safe methods</h2>
+            <h2>safe/idempotent methods</h2>
             <p>
-              q?
-            </p>
-          </section>
+              idempotent: a=4;<br/>
+              non-idempotent: a++;
+              <br/>
 
-          <section>
-            <h2>http idempotent</h2>
-            <p>
-              q?
+              <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Idempotent</th>
+                  <th>Safe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>OPTIONS</td>
+                  <td>yes</td>
+                  <td>yes</td>
+                <tr>
+                <tr>
+                  <td>GET</td>
+                  <td>yes</td>
+                  <td>yes</td>
+                <tr>
+                <tr>
+                  <td>HEAD</td>
+                  <td>yes</td>
+                  <td>yes</td>
+                <tr>
+                <tr>
+                  <td>PUT</td>
+                  <td>yes</td>
+                  <td>no</td>
+                <tr>
+                <tr>
+                  <td>POST</td>
+                  <td>no</td>
+                  <td>no</td>
+                <tr>
+                <tr>
+                  <td>DELETE</td>
+                  <td>yes</td>
+                  <td>no</td>
+                <tr>
+              </tbody>
+              </table>
             </p>
+            <aside class="notes">
+              <pre>
+                idempotent
+                 can be called many times without different outcomes
+                 no effect when called one than once
+                 в алгебрі - повторное применение операции к объекту даёт тот же результат, что и одинарное
+
+                safe
+                 must be used only for retrieval of data
+              <pre>
+            </aside>
           </section>
 
           <section>
             <h2>http: response format</h2>
             <p>
-              status line - HTTP/1.0 200 OK
-              header lines (server & resource meta data) - Data: 123
-                              Server: Apache/1.3.12 (Unix)
-                              Last-Modified: (data)
-                              Content-Type: text/html
-              carriage return/line feed
-              message body (Content-Length: message-payload)
+              <pre><code data-trim contenteditable style="padding:20px">
+(status line)  HTTP/1.0 200 OK
+(header lines) Data: 123
+               Server: Apache/1.3.12 (Unix)
+               Last-Modified: (data)
+               Content-Type: text/html
+               Content-Length: (message-payload)
+(carriage line feed)
+               (message body)
+              </code></pre>
             </p>
           </section>
 
           <section>
-            <h2>result code and phrase</h2>
+            <h2>http: result code and phrase</h2>
             <p>
-              1xx: Informational - not done yet
-              2xx: Success - you win
-              3xx: Redirection - you lose but try again
-              4xx: Client Error - you lose, your fault
-              5xx: Server Error - you lose, my bad
+              <pre><code data-trim contenteditable style="padding:20px">
+1xx: Informational - not done yet
+2xx: Success - you win
+3xx: Redirection - you lose but try again
+4xx: Client Error - you lose, your fault
+5xx: Server Error - you lose, my bad
+              </code></pre>
 
-              ..examples here, like "200 OK"..
+              Examples:<br/>
+              <ul style="font-size:30px">
+                <li>200 OK
+                <li>301 Moved Permanently
+                <li>302 Found
+                <li>307 Temporary Redirect
+                <li>401 Unauthorized
+                <li>403 Forbidden
+                <li>404 Not Found
+                <li>500 Internal Server Error
+              </ul>
             </p>
           </section>
 
           <section>
-            <h2>redirection</h2>
+            <h2>Redirection</h2>
             <p>
               http allows servers to redirect a client request to a different location
+              <br/>
 
-              HTTP/1.1 302 Found
-              Location: ...
+              <pre><code data-trim contenteditable style="padding:20px">
+HTTP/1.1 302 Found
+Location: ...
+              </code></pre>
             </p>
           </section>
 
           <section>
             <h2>improvements in http/1.1</h2>
             <p>
-              persistent connections
-                keeps the connection open after the server response
-                connection can be closed by either client or server
+              <ul>
+                <li>persistent connections
+                  <br/>
+                  <small>
+                    keeps the connection open after the server response
+                  </small>
 
-              request pipelining
-                allow a client to send several requests without waiting for a response
-                server responds in the same order
+                <li>request pipelining
+                  <br/>
+                  <small>
+                    allow a client to send several requests without waiting for a response
+                  </small>
 
-              chunked encoding
-                allows sender to break a message into arbitrary sized chunks
-                useful for dynamically created response messages
+                <li>chunked encoding
+                  <br/>
+                  <small>
+                    allows sender to break a message into arbitrary sized chunks
+                    <br/>
+                    useful for dynamically created response messages
+                  </small>
+              </ul>
             </p>
           </section>
 
@@ -1455,9 +1649,15 @@
 
         <section>
           <section>
-            <h2>...</h2>
+            <h2>Sniffers / Analyzers</h2>
             <p>
-              sniffers / analyzers
+            </p>
+          </section>
+
+          <section>
+            <h2>Fiddler</h2>
+            <p>
+              <img class="no-border" src="https://tournasdimitrios1.files.wordpress.com/2011/06/monitoring-http-traffic-with-fiddler2.jpg" />
             </p>
           </section>
 
@@ -1472,8 +1672,6 @@
         <section style="text-align: left;">
           <h1>THE END</h1>
           <p>
-            - <a href="#">link 1</a> <br>
-            - <a href="#">link 2</a>
           </p>
         </section>
 
