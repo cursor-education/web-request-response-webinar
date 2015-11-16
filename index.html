@@ -408,6 +408,20 @@
               <img class="no-border" src="https://newsbizblog.files.wordpress.com/2014/05/a3909-1-e-mediainstitute-global-internettrafficevolution.jpg" />
             </p>
           </section>
+
+          <section>
+            <h2></h2>
+            <p>
+              <img class="no-border" src="http://www.smartinsights.com/wp-content/uploads/2014/03/Mobile-stats-vs-desktop-users-global-550x405.png" />
+            </p>
+          </section>
+
+          <section>
+            <h2></h2>
+            <p>
+              <img class="no-border" src="http://www.smartinsights.com/wp-content/uploads/2015/06/Mobile-Internet-Trends-Mary-Meeker-2015-1-550x417.png" />
+            </p>
+          </section>
         </section>
 
         <section>
@@ -634,22 +648,161 @@
             </p>
 
             <aside class="notes">
-              an internet protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uess the Internet Protocol for communication
+              <pre>
+                internet protocol address
+              </pre>
             </aside>
           </section>
 
           <section>
-            <h2>...</h2>
+            <h2>IPv4</h2>
             <p>
-              IPv4
+              Internet Protocol version 4
+              <br/>
+
+              <img src="http://bulkmailstack.com/blog/wp-content/uploads/2015/06/IPv4.jpg" />
             </p>
+            <aside class="notes">
+              <pre>
+                RFC - вересень 1981 року (upd січень 1980 року)
+                4 байтну форму запису (32-бітні адреси)
+                4 294 967 296 (4 млд) unique
+                4 десяткових чисел від 0 до 255 (2^8)
+              </pre>
+            </aside>
           </section>
 
           <section>
-            <h2>...</h2>
+            <h2>IPv4 reserved</h2>
             <p>
-              IPv6
+              <table>
+              <thead>
+                <tr>
+                  <th>Subnetwork</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0.0.0.0/8</td>
+                  <td>Current network</td>
+                <tr>
+                <tr>
+                  <td>10.0.0.0/8</td>
+                  <td>Private network</td>
+                <tr>
+                <tr>
+                  <td>100.64.0.0/10</td>
+                  <td>Shared Address Space</td>
+                <tr>
+                <tr>
+                  <td>127.0.0.0/8</td>
+                  <td>Loopback</td>
+                <tr>
+                <tr>
+                  <td>169.254.0.0/16</td>
+                  <td>Link-local</td>
+                <tr>
+                <tr>
+                  <td>172.16.0.0/12</td>
+                  <td>Private network</td>
+                <tr>
+                <tr>
+                  <td>192.0.0.0/24</td>
+                  <td>IETF Protocol Assignments</td>
+                <tr>
+                <tr>
+                  <td>192.168.0.0/16</td>
+                  <td>Private network</td>
+                <tr>
+              </tbody>
+              </table>
+
             </p>
+            <aside class="notes">
+              <pre>
+                зарезервовані (не можуть бути глобально маршрутизованими)
+                2011 року виділила останні п’ять блоків IP-адрес
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>IPv6</h2>
+            <p>
+              Internet Protocol version 6
+              <br/>
+
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Ipv6_address_leading_zeros.svg/300px-Ipv6_address_leading_zeros.svg.png" width="50%" />
+              <br/>
+
+              2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d
+              <br/>
+              http://[2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d]:8080/
+              <br/>
+              0000:0000:0000:0000:0000:0000:ae21:ad12 => ::ae21:ad12
+            </p>
+            <aside class="notes">
+              <pre>
+                IPv5 - всі непарні версії експериментальні
+                
+                розробка почалася 1992 року
+                2006 release
+                
+                раніше на інтернет-адресу виділяли 4 байти
+                а протокол IPv6 виділяє на адресу 16 байтів
+
+                340 трильйонам адрес
+
+                основний заголовок пакета збільшився лише у 2 рази: з 20 до 40 байт
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>IPv6 reserved</h2>
+            <p>
+              <table>
+              <thead>
+                <tr>
+                  <th>IPv6 address</th>
+                  <th>IPv4 alias</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>::</td>
+                  <td>0.0.0.0</td>
+                <tr>
+                <tr>
+                  <td>::1</td>
+                  <td>127.0.0.1</td>
+                <tr>
+                <tr>
+                  <td>::xx.xx.xx.xx</td>
+                  <td>in-box IPv4</td>
+                <tr>
+                <tr>
+                  <td>::ffff:xx.xx.xx.xx</td>
+                  <td>IPv4 for servers without IPv6 support</td>
+                <tr>
+                <tr>
+                  <td>fe80:: — febf::</td>
+                  <td>169.254.0.0/16</td>
+                <tr>
+                <tr>
+                  <td>fec0:: — feff::</td>
+                  <td>site-local</td>
+                <tr>
+              </tbody>
+              </table>
+
+            </p>
+            <aside class="notes">
+              <pre>
+                
+              </pre>
+            </aside>
           </section>
         </section>
 
