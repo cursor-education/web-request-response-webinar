@@ -1414,6 +1414,18 @@ communication між client and the server
 (carriage line feed)
                 (message body)
               </code></pre>
+
+              <br/>
+
+request-line format (with examples):
+              <pre><code data-trim contenteditable style="padding:20px">
+(method) (resource-url) HTTP/(version)
+
+GET /index.html HTTP/1.0
+GET http://ya.ru/index.html HTTP/1.1
+POST http://olx.ua/post HTTP/1.1
+HEAD /ping HTTP/1.0
+              </code></pre>
             </p>
             <aside class="notes">
               <pre>
@@ -1468,6 +1480,14 @@ GET /wiki/HTTP HTTP/1.0
 Host: ru.wikipedia.org
 User-Agent: HTTPTool/1.0
               </code></pre>
+
+              <br/>
+
+              will<br/>
+              <b>make</b> a "GET" request<br/>
+              <b>to</b> http://ru.wikipedia.org/wiki/HTTP<br/>
+              <b>using</b> HTTP v1.0<br/>
+              <b>with</b> user-agent "HTTPTool/1.0"
             </p>
           </section>
 
@@ -1585,6 +1605,18 @@ User-Agent: HTTPTool/1.0
                Content-Length: (message-payload)
 (carriage line feed)
                (message body)
+              </code></pre>
+
+              <br/>
+
+              status-line format (with examples):
+              <br/>
+              <pre><code data-trim contenteditable style="padding:20px">
+HTTP/(version) (status-code) (status-message)
+
+HTTP/1.0 200 OK
+HTTP/1.1 403 Forbidden
+HTTP/1.1 404 Not Found
               </code></pre>
             </p>
           </section>
