@@ -958,6 +958,204 @@ UDP - User Datagram Protocol
 
         <section>
           <section>
+            <h2>OSI Model</h2>
+            
+            <p>
+              <u>A</u>ll <u>P</u>eople <u>S</u>eem <u>T</u>o <u>N</u>eed <u>D</u>ata <u>P</u>rocessing
+              <br/>
+
+              <img class="no-border" style="width:70%" src="http://cdn.savant.pro/home/assets/c00/00/00/0h/static/img/bc1d9c5e-a446-40bc-9279-d5ac85b5232b.gif?1315057278000" />
+            </p>
+
+            <aside class="notes">
+              <pre>
+Open Systems Interconnection Basic Reference Model
+Первая вещь, с которой сталкивается любой, кто изучает сети — это модель OSI
+семиуровневая эталонная модель
+
+Модель OSI была задумана ещё в 70-е годы
+позиционировалась как соперник стеку TCP/IP
+
+OSI помогает иллюстрировать зависимость одних протоколов от других
+
+the need for layered architecture
+
+Представляє рівневий підхід до мережі
+Вважається, що модель занадто складна, а її реалізація займе занадто багато часу
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Application Layer</h2>
+
+            <p>
+              <ul>
+                <li>unit: data
+                <li>Remote login to hosts: Telnet
+                <li>File transfer: File Transfer Protocol (FTP), Trivial File Transfer Protocol (TFTP)
+                <li>Electronic mail transport: Simple Mail Transfer Protocol (SMTP)
+                <li>Networking support: Domain Name System (DNS)
+                <li>...
+              </ul>
+            </p>
+
+            <aside class="notes">
+              <pre>
+Прикладний рівень
+забезпечує взаємодію мережі й користувача
+всі прикладні програми, які використовують доступ до мережі
+такі як оглядач веб-сторінок, електронна пошта, віддалений доступ до файлів та інші
+
+used in TCP/IP
+
+HTTP, Telnet, DNS, FTP, DHCP
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Presentation Layer</h2>
+
+            <p>
+              <ul>
+                <li>unit: data
+                <li>ASCII, Unicode
+              </ul>
+
+              layers (transmit <--> receive) + functions
+            </p>
+
+            <aside class="notes">
+              <pre>
+Сетевые услуги для прикладных процессов,
+таких как файловый доступ, печать, передача сообщений, базы данных
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Session Layer</h2>
+            
+            <p>
+              <ul>
+                <li>unit: data
+                <li>SSL, TLS, SOCKS
+              </ul>
+
+              layers (transmit <--> receive) + functions
+            </p>
+
+            <aside class="notes">
+              <pre>
+Стандартизированный интерфейс данных для прикладного уровня.
+Кодирование MIME, шифрование данных, конвертация, форматирование, сжатие
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Transport Layer</h2>
+            
+            <p>
+              <ul>
+                <li>TCP, UDP, SMB
+              </ul>
+
+              layers (transmit <--> receive) + functions
+            </p>
+
+            <aside class="notes">
+              <pre>
+Межхостовое взаимодействие.
+Устанавливает, управляет и завершает соединения между приложениями
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Network Layer</h2>
+            
+            <p>
+              <ul>
+                <li>unit: segments
+                <li>IPv4, IPv6, TCP/IP
+              </ul>
+
+              layers (transmit <--> receive) + functions
+            </p>
+
+            <aside class="notes">
+              <pre>
+Непрерывные соединения и надежность.
+Сегментация данных и их сбор в правильном порядке.
+Контроль потока передачи
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Datalink Layer</h2>
+
+            <p>
+              <ul>
+                <li>unit: packet
+                <li>Ethernet, PPP, PPPoE, PPTP
+              </ul>
+
+              layers (transmit <--> receive) + functions
+            </p>
+
+            <aside class="notes">
+              <pre>
+маршрутизатор
+
+Логическая адресация и определение пути.
+Маршрутизация.
+Уведомления об ошибках доставки
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>OSI Model: Physical Layer</h2>
+
+            <p>
+              <ul>
+                <li>unit: images
+              </ul>
+
+              layers (transmit <--> receive) + functions
+            </p>
+
+            <aside class="notes">
+              <pre>
+Физическая адресация и доступ к среде передачи данных.
+Состоит из двух подуровней:
+- управление логической связью (LLC)
+- и контроль доступа к среде (MAC)
+
+кадры
+мост, коммутатор, сетевая карта
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>TCP/IP vs OSI Model</h2>
+          
+          <p>
+            <img class="no-border" src="http://www.just2good.co.uk/images/gif/tcpipstack.gif" width="50%" />
+          </p>
+
+          <aside class="notes">
+
+          </aside>
+        </section>
+
+        <section>
+          <section>
             <h2>IP Address</h2>
 
             <p>
@@ -1313,204 +1511,6 @@ MX - Адрес почтового шлюза для домена (SMTP)
               <img src="http://www.ortizonline.com/images/sockets.gif" class="no-border" />
             </p>
           </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>OSI Model</h2>
-            
-            <p>
-              <u>A</u>ll <u>P</u>eople <u>S</u>eem <u>T</u>o <u>N</u>eed <u>D</u>ata <u>P</u>rocessing
-              <br/>
-
-              <img class="no-border" style="width:70%" src="http://cdn.savant.pro/home/assets/c00/00/00/0h/static/img/bc1d9c5e-a446-40bc-9279-d5ac85b5232b.gif?1315057278000" />
-            </p>
-
-            <aside class="notes">
-              <pre>
-Open Systems Interconnection Basic Reference Model
-Первая вещь, с которой сталкивается любой, кто изучает сети — это модель OSI
-семиуровневая эталонная модель
-
-Модель OSI была задумана ещё в 70-е годы
-позиционировалась как соперник стеку TCP/IP
-
-OSI помогает иллюстрировать зависимость одних протоколов от других
-
-the need for layered architecture
-
-Представляє рівневий підхід до мережі
-Вважається, що модель занадто складна, а її реалізація займе занадто багато часу
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Application Layer</h2>
-
-            <p>
-              <ul>
-                <li>unit: data
-                <li>Remote login to hosts: Telnet
-                <li>File transfer: File Transfer Protocol (FTP), Trivial File Transfer Protocol (TFTP)
-                <li>Electronic mail transport: Simple Mail Transfer Protocol (SMTP)
-                <li>Networking support: Domain Name System (DNS)
-                <li>...
-              </ul>
-            </p>
-
-            <aside class="notes">
-              <pre>
-Прикладний рівень
-забезпечує взаємодію мережі й користувача
-всі прикладні програми, які використовують доступ до мережі
-такі як оглядач веб-сторінок, електронна пошта, віддалений доступ до файлів та інші
-
-used in TCP/IP
-
-HTTP, Telnet, DNS, FTP, DHCP
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Presentation Layer</h2>
-
-            <p>
-              <ul>
-                <li>unit: data
-                <li>ASCII, Unicode
-              </ul>
-
-              layers (transmit <--> receive) + functions
-            </p>
-
-            <aside class="notes">
-              <pre>
-Сетевые услуги для прикладных процессов,
-таких как файловый доступ, печать, передача сообщений, базы данных
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Session Layer</h2>
-            
-            <p>
-              <ul>
-                <li>unit: data
-                <li>SSL, TLS, SOCKS
-              </ul>
-
-              layers (transmit <--> receive) + functions
-            </p>
-
-            <aside class="notes">
-              <pre>
-Стандартизированный интерфейс данных для прикладного уровня.
-Кодирование MIME, шифрование данных, конвертация, форматирование, сжатие
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Transport Layer</h2>
-            
-            <p>
-              <ul>
-                <li>TCP, UDP, SMB
-              </ul>
-
-              layers (transmit <--> receive) + functions
-            </p>
-
-            <aside class="notes">
-              <pre>
-Межхостовое взаимодействие.
-Устанавливает, управляет и завершает соединения между приложениями
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Network Layer</h2>
-            
-            <p>
-              <ul>
-                <li>unit: segments
-                <li>IPv4, IPv6, TCP/IP
-              </ul>
-
-              layers (transmit <--> receive) + functions
-            </p>
-
-            <aside class="notes">
-              <pre>
-Непрерывные соединения и надежность.
-Сегментация данных и их сбор в правильном порядке.
-Контроль потока передачи
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Datalink Layer</h2>
-
-            <p>
-              <ul>
-                <li>unit: packet
-                <li>Ethernet, PPP, PPPoE, PPTP
-              </ul>
-
-              layers (transmit <--> receive) + functions
-            </p>
-
-            <aside class="notes">
-              <pre>
-маршрутизатор
-
-Логическая адресация и определение пути.
-Маршрутизация.
-Уведомления об ошибках доставки
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>OSI Model: Physical Layer</h2>
-
-            <p>
-              <ul>
-                <li>unit: images
-              </ul>
-
-              layers (transmit <--> receive) + functions
-            </p>
-
-            <aside class="notes">
-              <pre>
-Физическая адресация и доступ к среде передачи данных.
-Состоит из двух подуровней:
-- управление логической связью (LLC)
-- и контроль доступа к среде (MAC)
-
-кадры
-мост, коммутатор, сетевая карта
-              </pre>
-            </aside>
-          </section>
-        </section>
-
-        <section>
-          <h2>TCP/IP vs OSI Model</h2>
-          
-          <p>
-            <img class="no-border" src="http://www.just2good.co.uk/images/gif/tcpipstack.gif" width="50%" />
-          </p>
-
-          <aside class="notes">
-
-          </aside>
         </section>
 
         <section>
