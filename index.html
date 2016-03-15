@@ -765,14 +765,14 @@ default IE in MacOS
           <section>
             <h2>Real life example of layered architecture</h2>
             <p class="text-left">
-              sender (pen) -><br/>
-              sender (pen + box) -><br/>
-              sender (pen + box + declaration) -><br/>
-              sender (pen + box + declaration + delivering) -><br/>
-              receiver (delivering + declaration + box + pen) -><br/>
-              receiver (declaration + box + pen) -><br/>
-              receiver (box + pen) -><br/>
-              receiver (pen)
+              <span class="fragment">(sender)</span> sender (pen) -><br/>
+              <span class="fragment">(sender)</span> sender (pen + box) -><br/>
+              <span class="fragment">(provider)</span> sender (pen + box + declaration) -><br/>
+              <span class="fragment">(delivery service)</span> sender (pen + box + declaration + delivering) -><br/>
+              <span class="fragment">(delivery service)</span> receiver (delivering + declaration + box + pen) -><br/>
+              <span class="fragment">(provider)</span> receiver (declaration + box + pen) -><br/>
+              <span class="fragment">(receiver)</span> receiver (box + pen) -><br/>
+              <span class="fragment">(receiver)</span> receiver (pen)
             </p>
           </section>
         </section>
