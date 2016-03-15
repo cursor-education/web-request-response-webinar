@@ -765,14 +765,16 @@ default IE in MacOS
           <section>
             <h2>Real life example of layered architecture</h2>
             <p class="text-left">
-              <span class="fragment">(sender)</span> sender (pen) -><br/>
-              <span class="fragment">(sender)</span> sender (pen + box) -><br/>
-              <span class="fragment">(provider)</span> sender (pen + box + declaration) -><br/>
-              <span class="fragment">(delivery service)</span> sender (pen + box + declaration + delivering) -><br/>
-              <span class="fragment">(delivery service)</span> receiver (delivering + declaration + box + pen) -><br/>
-              <span class="fragment">(provider)</span> receiver (declaration + box + pen) -><br/>
-              <span class="fragment">(receiver)</span> receiver (box + pen) -><br/>
-              <span class="fragment">(receiver)</span> receiver (pen)
+              <table class="reveal">
+                <tr><td><span class="fragment">(sender)</span></td>            <td>sender (pen) -></td></tr>
+                <tr><td><span class="fragment">(sender)</span></td>            <td>sender (pen + box) -></td></tr>
+                <tr><td><span class="fragment">(provider)</span></td>          <td>sender (pen + box + declaration) -></td></tr>
+                <tr><td><span class="fragment">(delivery service)</span></td>  <td>sender (pen + box + declaration + delivering) -></td></tr>
+                <tr><td><span class="fragment">(delivery service)</span></td>  <td>receiver (delivering + declaration + box + pen) -></td></tr>
+                <tr><td><span class="fragment">(provider)</span></td>          <td>receiver (declaration + box + pen) -></td></tr>
+                <tr><td><span class="fragment">(receiver)</span></td>          <td>receiver (box + pen) -></td></tr>
+                <tr><td><span class="fragment">(receiver)</span></td>          <td>receiver (pen)</td></tr>
+              </table>
             </p>
           </section>
         </section>
