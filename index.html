@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/simple.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.min.css" />
 
+    <style>
+      .reveal h2 {
+        font-weight: bold;
+      }
+    </style>
+
     <!--<link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/reveal.css">-->
     <!--<link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/theme/cursor-education.css" id="theme">-->
     <!--<link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/theme/cursor-education-more.css" id="theme">-->
@@ -2041,34 +2047,10 @@ used for securely transmitting the data between the browser and server
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.min.js"></script>-->
     <!--<script src="http://cursor-education.github.io/style/reveal/lib/js/head.min.js"></script>-->
     <!--<script src="http://cursor-education.github.io/style/reveal/js/reveal.js"></script>-->
-    <!--<script src="http://cursor-education.github.io/style/reveal/main.js"></script>-->
-    
-    <script>
-      (function() {
-        var CDN = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0';
-      
-        Reveal.initialize({
-          controls: true,
-          progress: true,
-          history: true,
-          center: true,
-      
-          transition: 'zoom',
-      
-          dependencies: [
-            { src: CDN + '/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
-            { src: CDN + '/plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-            { src: CDN + '/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-            { src: CDN + '/plugin/highlight/highlight.min.js', async: true, condition: function() { return !!document.querySelector('pre code'); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: CDN + '/plugin/zoom-js/zoom.min.js', async: true },
-            { src: CDN + '/plugin/notes/notes.min.js', async: true }
-          ]
-        });
-      })();
-    </script>
+    <script src="http://cursor-education.github.io/style/reveal/main.js"></script>
   </body>
 </html>
