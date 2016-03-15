@@ -2059,20 +2059,21 @@ used for securely transmitting the data between the browser and server
               <img src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http2-http-https.png" class="no-border" />
             </p>
           </section>
-          
-          <section>
-            <h2>HTTP vs HTTPs</h2>
-            <p>
-              <img src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http2-http-https.png" class="no-border" />
-            </p>
-          </section>
         </section>
 
         <section>
           <section>
             <h2>Google.com, and hit enter!</h2>
             <p>
-              <img src="http://www.codeproject.com/KB/aspnet/IISAndAspNETInDepth/clientServerCommunication.png" class="no-border" />
+              <ul>
+                <li class="fragment">parsing of URL (detected HTTP protocol, and "/" resource)
+                <li class="fragment">DNS request to gen an IP
+                <li class="fragment">open Socket connection over TCP (ip + port)
+                <li class="fragment">create HTTP packet & send
+                <li class="fragment">wait & get the HTTP response
+                <li class="fragment">close the TCP connection
+                <li class="fragment">parse & render the response body in browser
+              </ul>
             </p>
           </section>
         </section>
