@@ -1404,6 +1404,39 @@ wikipedia.org - домен 2го р-ня
               </pre>
             </aside>
           </section>
+          
+          <section>
+            <h2>DNS request</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+➜ ✗ host cursor.education
+cursor.education has address 91.194.250.152
+cursor.education mail is handled by 10 mx.yandex.ru.
+              </code></pre>
+            </p>
+          </section>
+          
+          <section>
+            <h2>DNS request (detailed)</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+➜ ✗ host -a cursor.education
+Trying "cursor.education"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43851
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+cursor.education.	14399	IN	SOA	ns7.rehost.com.ua. hostmaster.redo.com.ua. 2016021502 10200 3600 1209600 86400
+cursor.education.	14399	IN	NS	ns8.rehost.com.ua.
+cursor.education.	14399	IN	NS	ns7.rehost.com.ua.
+cursor.education.	14399	IN	A	91.194.250.152
+cursor.education.	14399	IN	TXT	"v=spf1 a mx ip4:91.194.250.152 ~all"
+cursor.education.	14399	IN	MX	10 mx.yandex.ru.
+
+Received 227 bytes from 8.8.8.8#53 in 128 ms
+              </code></pre>
+            </p>
+          </section>
 
           <section>
             <h2>DNS query lookup</h2>
