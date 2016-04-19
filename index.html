@@ -2113,11 +2113,14 @@ web-browsers normally delete session cookies when the user closes the browser
         
         <section>
           <section>
-            <h2>REpresentational State Transfer</h2>
+            <h2><u>RE</u>presentational <u>S</u>tate <u>T</u>ransfer</h2>
             <p class="text-left">
-              /index.php?article_id=10
+              Resource naming:
               <br/>
-              GET /article/10
+              /index.php?article_id=10 => GET /articles/10<br/>
+              /script.php?method=get_title&blogid=123 => GET /blogs/123/title<br/>
+              /all-posts/ => GET /posts<br/>
+              /orders/?getSum&order=218769 => GET /customers/15/orders/218769/sum<br/>
             </p>
           </section>
         </section>
