@@ -800,13 +800,13 @@ default IE in MacOS
             </p>
             <aside class="notes">
               <pre>
-  протоколи поділяються на рівні
-  кожен з яких виконує певну та взаємодіє з іншими частинами протоколу за чітко розробленими схемами
-  
-  інтернет працює на різних рівнях
-    фізичний (кабелі, роутери, маршрутизатори, )
-    поверх - є стек/набір мережевих протоколів (tcp/ip)
-    перетворення інформації при її руху по рівнях
+протоколи поділяються на рівні
+кожен з яких виконує певну та взаємодіє з іншими частинами протоколу за чітко розробленими схемами
+
+інтернет працює на різних рівнях
+  фізичний (кабелі, роутери, маршрутизатори, )
+  поверх - є стек/набір мережевих протоколів (tcp/ip)
+  перетворення інформації при її руху по рівнях
               </pre>
             </aside>
           </section>
@@ -815,11 +815,46 @@ default IE in MacOS
             <h2>Internet layers</h2>
             <p>
               <img src="http://www.cablefax.com/Assets/Image/Feature%20041012%202.jpg" />
-            </p>  
+            </p>
           </section>
         </section>
   
         <section>
+          <section>
+            <h2>TCP and UDP protocols</h2>
+            
+            <p>
+              TCP - Connection-oriented (3-way handshake)<br/>
+              UDP - Connectionless<br/>
+              <br/>
+              <img src="http://www.inetdaemon.com/img/internet/3-way-handshake.gif" width="50%" />
+            </p>
+            
+            <aside class="notes">
+              <pre>
+A three-way-handshake is a method used in a TCP/IP network to create
+a connection between a local host/client and server. It is a three-step method that requires both the client and server to exchange SYN and ACK (acknowledgment) packets before actual data communication begins.
+
+port UDP can use "0" port (means no port)
+              </pre>
+            </aside>
+          </section>
+          
+          <section>
+            <h2>TCP/IP Model</h2>
+            
+            <p>
+              TCP - Connection-oriented (3-way handshake)<br/>
+              UDP - Connectionless
+            </p>
+            
+            <aside class="notes">
+              <pre>
+A three-way-handshake is a method used in a TCP/IP network to create a connection between a local host/client and server. It is a three-step method that requires both the client and server to exchange SYN and ACK (acknowledgment) packets before actual data communication begins.
+              </pre>
+            </aside>
+          </section>
+
           <section>
             <h2>TCP/IP Model</h2>
 
@@ -1332,6 +1367,24 @@ IPv5 - всі непарні версії експериментальні
           </section>
         </section>
 
+
+        <section>
+          <section>
+            <h2>Port</h2>
+            <p>
+              16-bit number<br/>
+              google "well-known ports"
+            </p>
+            <aside class="notes">
+              <pre>
+2^16 = 65536
+ports opens & listen for incoming connection
+root <= 2024 (well-known ports)
+              </pre>
+            </aside>
+          </section>
+        </section>
+
         <section>
           <section>
             <h2>Роскомнадзор</h2>
@@ -1413,27 +1466,36 @@ divided to 13 groups (a*, b*)
           </section>
           
           <section>
+            <h2>Time To Live</h2>
+
+            <p>
+              lowest = 5 min<br/>
+              default = 24 hours
+            </p>
+          </section>
+          
+          <section>
             <p>
               <iframe width="854" height="480" src="https://www.youtube.com/embed/2ZUxoi7YNgs" frameborder="0" allowfullscreen></iframe>
             </p>
           </section>
-
+          
           <section>
-            <h2>DNS</h2>
+            <h2>Records</h2>
 
             <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/DNS-names-ru.svg/400px-DNS-names-ru.svg.png" width="70%" />
+              A (map IP to Host)<br/>
+              CNAME (alias with different A record)<br/>
+              MX (for sending an email)
             </p>
+          </section>
+          
+          <section>
+            <h2>Reverse Lookup</h2>
 
-            <aside class="notes">
-              <pre>
-домен - читається справа-наліво
-
-ru.wikipedia.org
-org - домен 1го р-ня
-wikipedia.org - домен 2го р-ня
-              </pre>
-            </aside>
+            <p>
+              Lookup Hosts on specific IP 
+            </p>
           </section>
           
           <section>
@@ -2191,9 +2253,65 @@ used for securely transmitting the data between the browser and server
             <p>
               <img src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http2-http-https.png" />
             </p>
+            <aside class="notes">
+              <pre>
+question: чи будуть куки захищені?
+              </pre>
+            </aside>
           </section>
         </section>
-
+              
+        <section>
+          <section>
+            <h2>FTP & sFTP & TFTP</h2>
+            <p>
+              port = 21<br/>
+              active & passive<br/>
+              
+              <img src="https://www.dropbox.com/s/tsnn96l80tojpm8/ftp-screen.png?raw=1" width="50%" />
+            </p>
+            <aside class="notes">
+              <pre>
+TFTP = light ftp, read-only, udp port 69
+              </pre>
+            </aside>
+          </section>
+        </section>
+              
+        <section>
+          <section>
+            <h2>SSH</h2>
+            <p>
+              Secury Shell, remote console access<br/>
+              Auth by PKI, credentials<br/>
+              <a href="http://www.putty.org/">PuTTY</a><br/>
+              
+              <img src="https://www.modmypi.com/image/data/tutorials/remote-access-ssh/raspberry-pi-ip-ifconfig.png" width="50%" />
+            </p>
+            <aside class="notes">
+              <pre>
+port 22, pki (publi key intrastructure), credentials (login & passw)
+              </pre>
+            </aside>
+          </section>
+        </section>
+              
+        <section>
+          <section>
+            <h2>RDP</h2>
+            <p>
+              Remote Desktop Protocol, for remote graphical access<br/>
+              
+              <img src="http://www.freewarereview.info/wordpress/wp-content/uploads/2007/04/vnc_rdp.jpg" width="50%" />
+            </p>
+            <aside class="notes">
+              <pre>
+port = 3389
+              </pre>
+            </aside>
+          </section>
+        </section>
+              
         <section>
           <section>
             <h2>Google.com, and hit enter!</h2>
