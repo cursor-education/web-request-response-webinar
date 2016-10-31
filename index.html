@@ -28,7 +28,7 @@
             <a href="http://github.com/itspoma" target="_blank">@itspoma</a> / <a href="http://cursor.education/" target="_blank">CURSOR Education</a>
           </h4>
           
-          <h4 class="version">v1.8</h4>
+          <h4 class="version">v1.9</h4>
         </section>
 
          <section class="text-left">
@@ -833,14 +833,16 @@ default IE in MacOS
             <aside class="notes">
               <pre>
 набір мережевих протоколів передачі даних
+IP & TCP - main protocols
 
 чотири рівні стека
-- канальный (езернет, ..)
-- сетевой (IP)
-- транспортный (tcp, udp, ..)
-- прикладной
+- (самий нижній) канальный (все шо звязано з фізичною передачою даних, пристрій до пристрою)
+- мережений (IP, передача даних між різними мережами)
+- транспортный (доставка даних, tcp, udp, ..)
+- прикладной (з яким найчастіше маємо справу як користувачі - браузер, почтові клієнти, месенджери, і тд)
 
-IP & TCP - main protocols
+кожен рівень - абстрактний
+прот кожного рівня працює завдяки протоколам нижче
 
 в 1970 ARPA
 мережі у світі могли бути об'єднані у формі віртуальної «мережі мереж»
@@ -986,6 +988,7 @@ Open Systems Interconnection Basic Reference Model
 позиционировалась как соперник стеку TCP/IP
 
 OSI помогает иллюстрировать зависимость одних протоколов от других
+
 
 the need for layered architecture
 
@@ -1699,10 +1702,12 @@ MAIL FROM: &lt;support@gmail.com&gt;
               HyperText Transfer Protocol
               <br/>
 
-              <img src="http://etutorials.org/shared/images/tutorials/tutorial_37/02fig03.gif" />
+              <img src="https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/images/HTTP.png" />
             </p>
             <aside class="notes">
               <pre>
+протокол прикладного рівня (osi)
+
 протокол передачи гипертекста
 
 гіпертекст - словник, енциклопедія
@@ -1815,6 +1820,8 @@ HEAD /ping HTTP/1.0
             </p>
             <aside class="notes">
               <pre>
+anatomy of http request/response
+
 request-line = тип повідомлення
 хедерс - заголовки, характеризують тіло повідомлення
 Message-Body - тіло повідомлення, дані
@@ -2089,7 +2096,7 @@ in clear text (security issue)
           <section>
             <h2>Session cookies</h2>
             <p>
-              <img src="http://cscie12.dce.harvard.edu/lecture_notes/2011/20110504/images/http_cookie1.png" width="50%" />
+              <img src="https://media-www-asp.azureedge.net/media/3712645/webapi-cookies01.png" width="50%" />
             </p>
             <aside class="notes">
               <pre>
@@ -2157,6 +2164,13 @@ used for securely transmitting the data between the browser and server
             <h2>HTTPS principle</h2>
             <p>
               <img src="http://golovoladki.ru/?qa=blob&qa_blobid=10033702249303131799" width="55%" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Man-in-the-middle attack</h2>
+            <p>
+              <img src="https://blog.comodo.com/wp-content/uploads/man-in-the-middle.png" width="50%" />
             </p>
           </section>
           
