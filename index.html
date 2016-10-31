@@ -70,14 +70,14 @@
           <section>
              <h2>Internet evolution</h2>
              <p>
-                <img src="http://image.slidesharecdn.com/internetofthingsdmc2013-131128011606-phpapp01/95/the-internet-of-things-dmc-2013-3-638.jpg?cb=1385601618" />
+                <img src="http://image.slidesharecdn.com/internetofthingsdmc2013-131128011606-phpapp01/95/the-internet-of-things-dmc-2013-3-638.jpg?cb=1385601618" width="80%" />
              </p>
           </section>
 
           <section>
              <h2>Internet Of Things (IoT)</h2>
              <p>
-                <img src="http://cdn.ttgtmedia.com/visuals/German/article/internet-of-things-1-fotolia.jpg" width="50%" />
+                <img src="http://cdn.ttgtmedia.com/visuals/German/article/internet-of-things-1-fotolia.jpg" width="100%" />
              </p>
           </section>
           
@@ -514,14 +514,7 @@ default IE in MacOS
             <aside class="notes">
             </aside>
           </section>
-          
-          <section>
-            <h2>Communication evolution</h2>
-            <p>
-              <img src="http://carolinas.aaa.com/Community-Site/Blogs/Drive%20Along%20with%20Tom/Lists/Photos/DSC_9457_Kindred%20Spirit.jpg" width="80%" />
-            </p>
-          </section>
-          
+
           <section>
             <h2>Communication evolution</h2>
             <p>
@@ -711,7 +704,7 @@ default IE in MacOS
             <p>
               The <u>pen</u>
               <br/>
-              <img src="http://www.pentel.com/store/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/e/ses15c-f.png" width="70%" />
+              <img src="http://www.pentel.com/store/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/e/ses15c-f.png" width="40%" />
             </p>
           </section>
           
@@ -767,7 +760,7 @@ default IE in MacOS
               The pen in box with declaration is delivered to receiver.<br/>
               He got it & confirmed personality, unboxed and <u>got the pen</u>.
               <br/>
-              <img src="http://www.pentel.com/store/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/e/ses15c-f.png" width="70%" />
+              <img src="http://www.pentel.com/store/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/e/ses15c-f.png" width="40%" />
             </p>
           </section>
           
@@ -1377,7 +1370,7 @@ IPv5 - всі непарні версії експериментальні
 
           <section>
             <p>
-               <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/fub733mh.png" width="70%" />
+               <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/fub733mh.png" width="100%" />
             </p>
           </section>
         </section>
@@ -2326,7 +2319,7 @@ question: чи будуть куки захищені?
               port = 21<br/>
               active & passive<br/>
               
-              <img src="https://www.dropbox.com/s/tsnn96l80tojpm8/ftp-screen.png?raw=1" width="50%" />
+              <img src="https://www.dropbox.com/s/tsnn96l80tojpm8/ftp-screen.png?raw=1" width="75%" />
             </p>
             <aside class="notes">
               <pre>
@@ -2552,8 +2545,30 @@ port = 3389
             <p>
               Content Delivery Network<br/>
 
-              <img src="https://gtmetrix.com/static/r133/resources/why-use-a-cdn/cdn-example.png" width="50%" />
+              <img src="https://gtmetrix.com/static/r133/resources/why-use-a-cdn/cdn-example.png" width="100%" />
             </p>
+          </section>
+          <section>
+            <h2>Subresource Integrity</h2>
+            <p>
+              https://www.srihash.org/
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+rel="stylesheet" 
+integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" 
+crossorigin="anonymous">
+              </code></pre>
+            </p>
+            <aside class="notes">
+              <pre>
+механізм який дає можливість користувачу (браузеру) перевірити чи отриманий ресурс отримаманий без unexpected змін
+
+curl https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css > bootstrap.min.css
+cat bootstrap.min.css | openssl dgst -sha256 -binary  | openssl enc -base64 -A
+              </pre>
+            </aside>
           </section>
         </section>
 
