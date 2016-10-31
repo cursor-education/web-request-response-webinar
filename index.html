@@ -2181,42 +2181,85 @@ web-browsers normally delete session cookies when the user closes the browser
               <pre>
             </aside>
           </section>
-
-<!-- 
-          <section>
-            <h2>user authentication</h2>
-            <p>
-              users browser information remembers credentials and includes them in headers for subsequent requests
-              browser typically deletes stored authentication credentials once browser is closed
-              http allos various authentication mechanisms
-              
-              ..code 401..
-              ..image here..
-            </p>
-          </section>
- -->
-
-<!-- 
-          <section>
-            <h2>ssl (secure socket layer): secure web commucations</h2>
-            <p>
-              was designed to encrypt any tcp/ip based network traffic and provide the following capabilities
-              ssl protocol is application independent
-              operates between application layer and transport layer
-              application protocol such as http sit on top of it and tcp/ip beneath it
-              ssl provides
-
-              ..how ssl works..
-
-              need ssl when:
-              - you have an online store or accept online order and credit cards
-              - you offer a login / sign-in on your site
-              - you process sensitive data such as address, bidth date, ID numbers
-              - you need to comply with privacy and security requirements
-            </p>
-          </section>
- -->
         </section>
+
+        <section>
+          <section>
+            <h2>HTTP Setting Cookies</h2>
+            <p>
+              Name, Value, Expires, Path, Domain
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>HTTP Caching</h2>
+            <p>
+              <b>Cache-Control</b>, <b>Last-Modified</b> and <b>Expires</b>
+            </p>
+          </section>
+          
+          <section>
+            <h2>HTTP Caching</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+Cache-Control: no-cache
+Pragma: no-cache
+
+Cache-Control: private/public
+Cache-Control: max-age=31536000
+
+Last-Modified: Wed, 25 Feb 2015 12:00:00 GMT
+Expires: Thu, 25 Feb 2016 12:00:00 GMT
+
+If-Modified-Since: Wed, 25 Feb 2015 17:42:04 GMT
+              </code></pre>
+            </p>
+          </section>
+        </section>
+            
+        <section>
+          <section>
+            <h2>HTTP Compression</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Length: 1253
+              </code></pre>
+
+            </p>
+          </section>
+        </section>
+              
+        <section>
+          <section>
+            <h2>HTTP Basic Authentication</h2>
+            <p>
+              Response:
+              <pre><code data-trim contenteditable style="padding:20px">
+HTTP/1.1 401 Access Denied
+WWW-Authenticate: Basic realm="My Server"
+Content-Length: 0
+              </code></pre>
+              
+              <br/>
+            
+              Request:
+              <pre><code data-trim contenteditable style="padding:20px">
+GET /securefiles/ HTTP/1.1
+Host: www.httpwatch.com
+Authorization: Basic aHR0cHdhdGNoOmY=
+              </code></pre>
+
+              <a href="https://www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?0.11294169834514678">example</a>
+            </p>
+            <aside class="notes">
+...
+            </aside>
+          </section>
+       </section>
 
         <section>
           <section>
@@ -2352,7 +2395,7 @@ port = 3389
           </section>
 
           <section>
-            <h2>Fiddler</h2>
+            <h2><a href="https://www.telerik.com/download/fiddler/fiddler-osx-beta">Fiddler</a></h2>
             <p>
               <img src="https://tournasdimitrios1.files.wordpress.com/2011/06/monitoring-http-traffic-with-fiddler2.jpg" />
             </p>
